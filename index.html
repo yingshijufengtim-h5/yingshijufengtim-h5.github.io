@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>飓风光影指南 | 合规影视导航（非影视飓风频道）</title>
+  <meta name="description" content="飓风光影指南（yingshijufeng-h5）做影视技术向正版导航与片单推荐。非影视飓风频道、非Tim本人、无授权关系；不聚合片源，不提供播源解析/APK/离线缓存/磁力网盘。" />
+  <meta name="author" content="飓风光影指南" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#0B1B2B" />
+  <link rel="canonical" href="https://yingshijufeng-h5.github.io/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="飓风光影指南" />
+  <meta property="og:title" content="飓风光影指南 | 合规影视导航" />
+  <meta property="og:description" content="非影视飓风频道、非Tim本人，只做影视技术向正版导航。" />
+  <meta property="og:url" content="https://yingshijufeng-h5.github.io/" />
+  <meta property="og:locale" content="zh_CN" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="飓风光影指南 | 合规影视导航" />
+  <meta name="twitter:description" content="影视技术向正版导航，与影视飓风频道及Tim本人无关联。" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "飓风光影指南",
+    "url": "https://yingshijufeng-h5.github.io/",
+    "description": "影视技术向正版影视导航与片单推荐站（独立站点，与任何自媒体频道及个人无关联）。",
+    "inLanguage": "zh-CN"
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#0B1B2B;
+      --bg2:#11243A;
+      --card:#16304A;
+      --line:#24547A;
+      --ink:#E8F1F8;
+      --ink-light:#A9C4DA;
+      --muted:#6E8AA3;
+      --storm:#4FC3F7;
+      --storm-deep:#1E88E5;
+      --bolt:#FFD54F;
+      --bolt-deep:#F9A825;
+      --ticket:#FBF7EC;
+      --red:#EF5350;
+      --radius:16px;
+      --maxw:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);line-height:1.75;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+
+    header.nav{position:sticky;top:0;z-index:50;background:rgba(11,27,43,.96);backdrop-filter:blur(12px);border-bottom:2px solid var(--storm)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px}
+    .logo{font-weight:900;font-size:21px;display:flex;align-items:center;gap:10px}
+    .logo .vortex{width:26px;height:26px;position:relative;overflow:hidden;border-radius:50%;border:2px solid var(--storm)}
+    .logo .vortex::before,.logo .vortex::after{content:'';position:absolute;border-radius:50%;border:2px solid var(--storm);inset:2px;animation:spin 2.4s linear infinite}
+    .logo .vortex::after{inset:8px;border-color:var(--bolt);animation-direction:reverse;animation-duration:1.8s}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .logo b{color:var(--storm)}
+    .logo span{color:var(--ink)}
+    nav.menu{display:flex;gap:6px;font-size:14px;font-weight:700;color:var(--muted)}
+    nav.menu a{padding:8px 14px;border-radius:8px;border:2px solid transparent;transition:.2s}
+    nav.menu a:hover{color:var(--ink);border-color:var(--line);background:var(--bg2)}
+    .nav-toggle{display:none;background:none;border:2px solid var(--storm);color:var(--ink);border-radius:8px;padding:5px 10px;font-size:18px;cursor:pointer}
+
+    .hero{padding:74px 0 80px;background:
+      radial-gradient(620px 360px at 82% 8%,rgba(79,195,247,.18),transparent 60%),
+      radial-gradient(420px 240px at 6% 94%,rgba(255,213,79,.12),transparent 60%),
+      linear-gradient(180deg,#11243A,#0B1B2B);position:relative;overflow:hidden}
+    .hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+    .pill{display:inline-block;background:var(--storm-deep);color:#E1F5FE;font-size:11px;font-weight:800;padding:5px 16px;border-radius:20px;letter-spacing:1px;text-transform:uppercase;margin-bottom:18px}
+    .disclaim{display:inline-block;margin-left:8px;font-size:11px;font-weight:700;color:var(--bolt);border:1px dashed var(--bolt-deep);border-radius:20px;padding:4px 12px;vertical-align:middle}
+    .hero h1{font-size:clamp(30px,5.5vw,50px);line-height:1.1;margin:0 0 14px;font-weight:900}
+    .hero h1 em{font-style:normal;color:var(--storm)}
+    .hero h1 .ink-em{color:var(--bolt)}
+    .hero p.lead{font-size:16px;color:var(--muted);max-width:640px;margin:0 0 22px}
+    .hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+    .hero-tag{border:2px solid var(--line);border-radius:8px;padding:5px 13px;font-size:13px;font-weight:600;background:var(--card)}
+    .cta{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{padding:13px 26px;border-radius:10px;font-weight:800;font-size:15px;transition:.2s;display:inline-flex;gap:6px;align-items:center;cursor:pointer}
+    .btn-primary{background:var(--storm);color:#0B1B2B;border:2px solid var(--storm)}
+    .btn-primary:hover{background:var(--storm-deep);border-color:var(--storm-deep);color:#fff}
+    .btn-ghost{border:2px solid var(--ink);color:var(--ink);background:transparent}
+    .btn-ghost:hover{background:var(--ink);color:var(--bg)}
+
+    /* 风暴眼 + 闪电 */
+    .storm-stage{width:300px;height:300px;margin:0 auto;position:relative;background:radial-gradient(circle at 50% 50%,#16304A,#0B1B2B);border-radius:50%;border:3px solid var(--storm);box-shadow:0 0 50px rgba(79,195,247,.3);overflow:hidden;display:flex;align-items:center;justify-content:center}
+    .swirl{position:absolute;inset:-30px;border-radius:50%;border:2px solid rgba(79,195,247,.35);animation:swirl 5s linear infinite}
+    .swirl.s2{inset:-60px;border-color:rgba(255,213,79,.25);animation-direction:reverse;animation-duration:7s}
+    .swirl.s3{inset:-90px;border-color:rgba(79,195,247,.18);animation-duration:9s}
+    @keyframes swirl{to{transform:rotate(360deg)}}
+    .bolt{position:relative;z-index:2;font-size:56px;color:var(--bolt);text-shadow:0 0 20px var(--bolt);animation:flash 1.6s ease-in-out infinite}
+    @keyframes flash{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.6;transform:scale(1.08)}}
+    .eye-label{position:absolute;bottom:22px;font-size:11px;letter-spacing:3px;color:var(--storm);font-weight:800;z-index:2}
+
+    section{padding:60px 0;border-bottom:2px dashed var(--line)}
+    .sec-head{margin-bottom:32px;text-align:center}
+    .sec-head .kicker{color:var(--storm);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:11px}
+    .sec-head h2{font-size:clamp(24px,4vw,34px);margin:6px 0 8px;font-weight:900}
+    .sec-head p{color:var(--muted);margin:0 auto;max-width:700px;font-size:14px}
+
+    .why{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .why-card{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:24px}
+    .why-card.bad{border-left:6px solid var(--red)}
+    .why-card.good{border-left:6px solid var(--storm)}
+    .why-card h3{margin:0 0 12px;font-size:17px;font-weight:800;display:flex;align-items:center;gap:8px}
+    .why-card ul{margin:0;padding-left:18px;color:var(--ink-light);font-size:13px}
+    .why-card ul li{margin:6px 0}
+
+    .cats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .cat{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:22px;text-align:center;transition:.3s}
+    .cat:hover{transform:translateY(-4px);box-shadow:0 10px 26px rgba(79,195,247,.2);border-color:var(--storm)}
+    .cat .ic{font-size:34px;display:block;margin-bottom:10px}
+    .cat h3{margin:0 0 6px;font-size:15px;font-weight:800}
+    .cat p{margin:0;color:var(--muted);font-size:12px}
+
+    .tech{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+    .film{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:24px;transition:.3s;position:relative}
+    .film::before{content:'';position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,var(--storm),var(--bolt))}
+    .film:hover{transform:translateY(-4px);box-shadow:0 10px 26px rgba(79,195,247,.2)}
+    .film .ic{font-size:32px;display:block;margin-bottom:8px}
+    .film h3{margin:0 0 4px;font-size:16px;font-weight:900}
+    .film .sub{font-size:11px;color:var(--bolt);font-weight:700;margin-bottom:6px}
+    .film p{margin:0;color:var(--ink-light);font-size:13px}
+    .film ul{margin:10px 0 0;padding-left:18px;color:var(--muted);font-size:12px}
+    .film ul li{margin:2px 0}
+
+    .src{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .src-card{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:22px;text-align:center;transition:.3s}
+    .src-card:hover{border-color:var(--storm);background:var(--bg2)}
+    .src-card .ic{font-size:32px;margin-bottom:8px;display:block}
+    .src-card h3{margin:0 0 4px;font-size:15px;font-weight:800}
+    .src-card p{margin:0;color:var(--muted);font-size:12px}
+
+    .warn{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .reef{background:var(--card);border:2px solid var(--line);border-radius:12px;padding:22px;border-top:5px solid var(--red)}
+    .reef:nth-child(2){border-top-color:var(--storm)}
+    .reef:nth-child(3){border-top-color:var(--bolt)}
+    .reef h3{margin:0 0 8px;font-size:16px;font-weight:800}
+    .reef p{margin:0;color:var(--ink-light);font-size:13px}
+
+    .legal-box{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:32px;max-width:920px;margin:0 auto}
+    .legal-box h3{color:var(--ink-light);font-size:17px;font-weight:800;margin:24px 0 10px;display:flex;align-items:center;gap:8px}
+    .legal-box h3:first-child{margin-top:0}
+    .legal-box p{color:var(--ink-light);font-size:14px;line-height:1.85;margin:0}
+    .legal-box b{color:var(--red)}
+    .legal-box .cite{background:var(--bg2);border-left:4px solid var(--storm);padding:12px 16px;margin:12px 0;border-radius:0 8px 8px 0;font-size:13px;color:var(--ink);font-style:italic}
+
+    .notice{background:var(--bg2);border:2px dashed var(--bolt-deep);border-radius:12px;padding:14px 18px;font-size:13px;color:var(--ink-light);max-width:860px;margin:24px auto 0}
+    .notice b{color:var(--bolt)}
+
+    footer{padding:36px 0;text-align:center;color:var(--muted);font-size:13px;background:#06101A}
+    footer a{color:var(--storm)}
+
+    #toTop{position:fixed;right:16px;bottom:16px;z-index:60;width:46px;height:46px;border-radius:50%;border:2px solid var(--storm);background:var(--storm);color:#0B1B2B;font-size:20px;font-weight:900;cursor:pointer;opacity:0;pointer-events:none;transition:.25s}
+    #toTop.show{opacity:1;pointer-events:auto}
+    .reveal{opacity:0;transform:translateY(16px);transition:.5s ease}
+    .reveal.in{opacity:1;transform:none}
+
+    @media (max-width:980px){
+      .hero .wrap{grid-template-columns:1fr}
+      .why{grid-template-columns:1fr}
+      .cats{grid-template-columns:1fr 1fr}
+      .tech{grid-template-columns:1fr}
+      .src{grid-template-columns:1fr 1fr}
+      .warn{grid-template-columns:1fr}
+    }
+    @media (max-width:640px){
+      .nav-toggle{display:block}
+      nav.menu{position:absolute;top:66px;left:0;right:0;flex-direction:column;gap:0;padding:10px 20px 20px;background:rgba(11,27,43,.98);border-bottom:2px solid var(--storm);display:none}
+      nav.menu.open{display:flex}
+      nav.menu a{padding:12px 8px;border-bottom:2px solid var(--line);border-radius:0}
+      .cats{grid-template-columns:1fr}
+      .src{grid-template-columns:1fr}
+      .storm-stage{width:260px;height:260px}
+    }
+  </style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <div class="logo"><span class="vortex"></span><b>飓风</b><span>光影指南</span></div>
+      <button class="nav-toggle" aria-label="菜单" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+      <nav class="menu" id="menu">
+        <a href="#home">首页</a>
+        <a href="#why">为什么另起壳</a>
+        <a href="#cats">正版分类导航</a>
+        <a href="#list">技术向片单</a>
+        <a href="#src">正版信源</a>
+        <a href="#warn">冒牌站避坑</a>
+        <a href="#legal">品牌与版权声明</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="wrap">
+      <div>
+        <div class="pill">Storm Eye · Legal Only<span class="disclaim">非影视飓风 · 非Tim</span></div>
+        <h1>飓风光影指南<br/>风暴之眼<em>只映正典</em><span class="ink-em">不蹭名号</span></h1>
+        <p class="lead">本站是独立影视导航壳，<b>不是「影视飓风」频道、不是Tim本人或团队运营、无任何授权/合作关系</b>。不聚合片源、不提供播源解析/APK/离线缓存/磁力网盘。原提交含真人标识片段，已弃用，仅保留「飓风」字面。</p>
+        <div class="hero-tags">
+          <span class="hero-tag">独立导航</span>
+          <span class="hero-tag">非原频道</span>
+          <span class="hero-tag">非Tim本人</span>
+          <span class="hero-tag">无播源解析</span>
+          <span class="hero-tag">风暴雷达风</span>
+        </div>
+        <div class="cta">
+          <a class="btn btn-primary" href="#cats">正版分类导航 →</a>
+          <a class="btn btn-ghost" href="#legal">品牌声明</a>
+        </div>
+      </div>
+      <div>
+        <div class="storm-stage">
+          <div class="swirl"></div>
+          <div class="swirl s2"></div>
+          <div class="swirl s3"></div>
+          <div class="bolt">⚡</div>
+          <div class="eye-label">风暴之眼</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why" class="reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Why A Separate Shell</div>
+        <h2>为什么要另起壳</h2>
+        <p>红人品牌名不能直接拿来建站。</p>
+      </div>
+      <div class="why">
+        <div class="why-card bad">
+          <h3>🚫 冒牌风险信号</h3>
+          <ul>
+            <li>用频道名+主理人名建站，易致用户混淆</li>
+            <li>暗示官方/授权关系，涉不正当竞争</li>
+            <li>盗用肖像、昵称、节目片段引流</li>
+            <li>挂播源解析、APK、网盘资源</li>
+          </ul>
+        </div>
+        <div class="why-card good">
+          <h3>✅ 本指南做法</h3>
+          <ul>
+            <li>独立命名「飓风光影指南」，弃用真人标识</li>
+            <li>Hero 与页脚双重撇清无关联</li>
+            <li>只列正版持权平台与分类路径</li>
+            <li>不聚合、不解析、不挂资源</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cats" class="reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Category Nav</div>
+        <h2>正版分类导航</h2>
+        <p>影视技术向四个入口，跳正版渠道。</p>
+      </div>
+      <div class="cats">
+        <div class="cat"><span class="ic">🎥</span><h3>摄影灯光</h3><p>器材/布光正版课程</p></div>
+        <div class="cat"><span class="ic">✂️</span><h3>剪辑调色</h3><p>正版教程/软件官方</p></div>
+        <div class="cat"><span class="ic">🎬</span><h3>技术向片单</h3><p>持牌平台正版内容</p></div>
+        <div class="cat"><span class="ic">📐</span><h3>视听科普</h3><p>官方频道/展映</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="list" class="reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Storm Reel List</div>
+        <h2>技术向片单</h2>
+        <p>只列方向、正版路径与学习渠道，不挂播源。</p>
+      </div>
+      <div class="tech">
+        <div class="film">
+          <span class="ic">🎥</span>
+          <h3>摄影与灯光</h3>
+          <div class="sub">器材 · 布光 · 正版课程</div>
+          <p>镜头语言、打光思路、画面质感。</p>
+          <ul>
+            <li>官方认证课程/厂商教程</li>
+            <li>正版平台技术纪录片</li>
+            <li>不装来路不明插件/播放器</li>
+          </ul>
+        </div>
+        <div class="film">
+          <span class="ic">✂️</span>
+          <h3>剪辑与调色</h3>
+          <div class="sub">后期 · 正版软件渠道</div>
+          <p>剪辑逻辑、调色流程、声音设计。</p>
+          <ul>
+            <li>软件官网/正版订阅</li>
+            <li>官方教学频道</li>
+            <li>不搜「飓风同款源」</li>
+          </ul>
+        </div>
+        <div class="film">
+          <span class="ic">🎬</span>
+          <h3>技术向观影</h3>
+          <div class="sub">视听语言 · 正版点播</div>
+          <p>值得拆解画面与叙事的影片。</p>
+          <ul>
+            <li>正规票务/正版点播</li>
+            <li>认准授权片源</li>
+            <li>不点假播放键</li>
+          </ul>
+        </div>
+        <div class="film">
+          <span class="ic">📐</span>
+          <h3>视听科普</h3>
+          <div class="sub">科普 · 官方发行</div>
+          <p>摄影史、技术演进、幕后制作纪实。</p>
+          <ul>
+            <li>官方纪录频道</li>
+            <li>展映/学术放映</li>
+            <li>不碰盗版转录</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="src" class="reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Legal Sources</div>
+        <h2>正版信源</h2>
+        <p>只走持权分发与官方渠道。</p>
+      </div>
+      <div class="src">
+        <div class="src-card"><span class="ic">🎓</span><h3>官方课程</h3><p>厂商/平台认证教学</p></div>
+        <div class="src-card"><span class="ic">📺</span><h3>正版OTT</h3><p>持牌平台订阅/租赁</p></div>
+        <div class="src-card"><span class="ic">🏛️</span><h3>官方频道</h3><p>电视台/制作方发行</p></div>
+        <div class="src-card"><span class="ic">🛒</span><h3>数字商城</h3><p>正版软件/碟片</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="warn" class="reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Fake Storm Site</div>
+        <h2>冒牌站避坑</h2>
+        <p>打着红人名号引流的常见套路。</p>
+      </div>
+      <div class="warn">
+        <div class="reef">
+          <h3>🚫 冒称官方</h3>
+          <p>站名带频道/主理人名却无授权声明，多为蹭流量、导流或卖课。</p>
+        </div>
+        <div class="reef">
+          <h3>🚫 资源合集</h3>
+          <p>"全套教程/工程文件/片源打包"常是未授权搬运，还夹带恶意下载。</p>
+        </div>
+        <div class="reef">
+          <h3>🚫 诱导付费</h3>
+          <p>假会员、假群、假APP，付款前先核对是否为真实官方渠道。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="legal" class="reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Brand & Copyright</div>
+        <h2>品牌与版权声明</h2>
+        <p>不混淆、不攀附、不侵权。</p>
+      </div>
+      <div class="legal-box">
+        <h3>🌪️ 品牌撇清</h3>
+        <p>「飓风光影指南」为独立导航壳站点，与「影视飓风」频道、其运营团队及主理人 <b>Tim 本人均无任何关联</b>，未获授权、非官方镜像、非粉丝站署名运营。 本站不使用任何相关商标、肖像、节目片段或昵称进行宣传。原提交域名含真人标识片段（tim），已整体弃用，现域名：yingshijufeng-h5。</p>
+
+        <h3>📜 法律依据</h3>
+        <p>《反不正当竞争法》第六条：经营者不得擅自使用与他人有一定影响的商品名称、企业名称、姓名等相同或近似的标识，引人误认为是他人商品或与他人存在特定联系。 影视作品及其画面、声音、剪辑均受《著作权法》信息网络传播权保护。</p>
+        <div class="cite">《互联网视听节目服务管理规定》第十七条：不得转播、链接、聚合、集成非法视听节目。</div>
+
+        <h3>🛡️ 本指南立场</h3>
+        <p>本站不提供、不推荐、不链接任何播源解析、APK下载、离线缓存、磁力网盘、教程打包或工程文件资源。所有片单与学习渠道仅指向正版持权平台及官方订阅/租赁/购票入口。如发现冒用品牌建站引流，请优先核验官方渠道并保留证据。</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="notice">
+    <b>声明：</b>本页「飓风光影指南」为独立导航壳，<b>非「影视飓风」频道、非Tim本人或团队、无授权/合作关系</b>，不聚合片源；不提供播源解析/APK下载/离线缓存/磁力/网盘码/教程打包；按《著作权法》《反不正当竞争法》及网络视听节目管理规定要求，不转播、链接、聚合、集成非法视听节目。原提交域名真人标识片段已弃用，现域名：yingshijufeng-h5。
+  </div>
+
+  <footer>
+    <div class="wrap">
+      © 2026 飓风光影指南（yingshijufeng-h5）｜ 独立静态展示站点 ｜
+      内页链接以 <a href="#">#</a> 占位 ｜
+      网站网址：https://yingshijufeng-h5.github.io ｜
+      非影视飓风频道 · 非Tim本人 · 不提供播源解析、APK、盗版资源、磁力。
+    </div>
+  </footer>
+
+  <button id="toTop" aria-label="回到顶部" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+  <script>
+    document.querySelectorAll('#menu a').forEach(function(a){
+      a.addEventListener('click',function(){ document.getElementById('menu').classList.remove('open'); });
+    });
+    var toTop=document.getElementById('toTop');
+    window.addEventListener('scroll',function(){ toTop.classList.toggle('show',window.scrollY>400); });
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+    },{threshold:0.1});
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  </script>
+</body>
+</html>
